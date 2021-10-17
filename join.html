@@ -1,0 +1,151 @@
+<!doctype html>
+<html lank="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-sacle=1, user-scalble=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">    
+<title>PRO-SPECS:JOIN</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="css/hamburgers.min.css" rel="stylesheet" type="text/css">
+<link href="css/join.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(document).ready(function(){
+	$(".join-terms").click(function(){
+            $(".join-terms .arrow").toggleClass("on");
+            $(".join-terms .box1").slideToggle("on");
+        });
+});
+</script>
+
+</head>
+<body>
+
+ <div class="wrap"> <!-- wrap start -->
+ 
+  <header class="header"> <!-- header start -->
+   <a href="index.html">
+   <img src="img/logo_l.png" alt="" class="logo">
+   </a>
+  </header> <!-- header end -->
+  
+  <main class="main"> <!-- main start -->
+   <div class="join"> <!-- join start -->
+   
+    <div class="join_inner"> <!-- join_inner start -->
+     <h1>프로스펙스 회원 가입</h1>
+     <h2>회원 가입을 통해 최고의 상품과 이벤트를 누리세요! </h2>
+     <h3><p>*</p>필수입력</h3>
+     
+     <div class="id">
+      <li>아이디<p>*</p></li>
+      <input type="text" name="" id="" placeholder="사용할 아이디를 입력해주세요">
+     </div>
+     <div class="pwd">
+      <li>비밀번호<p>*</p></li>
+      <input type="password" name="" id="" placeholder="비밀번호를 입력해주세요">
+     </div>
+     <div class="pwd-check">
+      <li>비밀번호 재입력<p>*</p></li>
+      <input type="password" name="" id="" placeholder="비밀번호를 다시 입력해주세요">
+     </div>
+     <div class="name">
+      <li>성명<p>*</p></li>
+      <input type="text" name="" id="" placeholder="이름을 입력해주세요">
+     </div>
+     <div class="birth">
+      <li>생년월일<p>*</p></li>
+      <select name="birth" id="birth">
+       <option value="">년도(YYYY)</option>
+       <option value="">2001</option>
+       <option value="">2000</option>
+       <option value="">1999</option>
+       <option value="">1998</option>
+       <option value="">1997</option>
+       <option value="">1996</option>
+       <option value="">1995</option>
+       <option value="">1994</option>
+       <option value="">1993</option>
+       <option value="">1992</option>
+       <option value="">1991</option>
+       <option value="">1990</option>
+      </select>
+      <select name="birth" id="birth">        
+       <option value="">월(MM)</option>
+       <option value="">1</option>
+       <option value="">2</option>
+       <option value="">3</option>
+       <option value="">4</option>
+       <option value="">5</option>
+       <option value="">6</option>
+       <option value="">7</option>
+       <option value="">8</option>
+       <option value="">9</option>
+       <option value="">10</option>
+       <option value="">11</option>
+       <option value="">12</option>
+      </select>
+      <select name="birth" id="birth">
+       <option value="">일(DD)</option>
+      </select>
+     </div>
+     <div class="mobile">
+      <li>휴대전화<p>*</p></li>
+      <input type="text" name="" ld="" placeholder="(010)"> -
+      <input type="text" name="" ld="" placeholder="(xxxx)"> -
+      <input type="text" name="" ld="" placeholder="(xxxx)">
+     </div>
+     <div class="mail">
+      <li>E-MAIL</li>
+      <input type="text" name="" ld=""> @ 
+      <select name="mail" id="mail">
+       <option value="">naver.com</option>
+       <option value="">daum.net</option>
+       <option value="">gmail.com</option>
+       <option value="">hotmail.com</option>
+       <option value="">nate.com</option>
+      </select>
+      </div>
+      <div class="join-terms">
+       <input type="checkbox" name="" ld="">
+       <li>이용약관 및 개인정보 수집에 동의합니다.</li>
+       <img src="img/arrow.png" class="arrow" alt="이미지버튼">
+       <div class="box1">
+        <h1>프로스펙스 이용약관</h1>
+        <h2>제1조 목적</h2>
+        <h3>이 약관은 '프로스펙스 닷컴 서비스 이용 약관' (이하 “회사”라 한다)에서 운영하는 프로스펙스에서(http://www.prospecs.com) 사이버몰(이하 “몰”이라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버몰과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.</h3>
+       
+        <p>약관은 거부가 가능하나  서비스 이용 불가합니다</p>
+       </div>
+      </div> 
+      <div class="btn">
+       <input type="button" value="회원가입">
+      </div>
+    </div> <!-- join_inner end -->
+     
+   </div> <!-- join end -->
+  </main> <!-- main end -->
+  
+  <footer class="footer"> <!-- footer start -->
+   <p>
+   <h2 class="blind">프로스펙스 정책</h2>
+   <ul class="info">
+    <li><a href="#">이용약관</a></li>
+    <li><a href="#">개인정보처리방침</a></li>
+    <li><a href="#">책임의 한계와 법적고지</a></li>
+    <li><a href="#">회원정보 고객센터</a></li>
+   </ul>
+  </p>
+  
+  <p class="copyright">COPYRIGHT(c) LS NETWORKS CO. ALL RIGHTS RESERVED.</p>
+  </footer> <!-- footer end -->
+ 
+ </div> <!-- wrap end -->
+
+</body>
+</html>
