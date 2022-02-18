@@ -1,353 +1,401 @@
-<!doctype html>
-<html lank="ko">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-sacle=1, user-scalble=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">    
-<title>PRO-SPECS</title>
-<link href="css/reset.css" rel="stylesheet" type="text/css">
-<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
-<link href="css/hamburgers.min.css" rel="stylesheet" type="text/css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet"  type="text/css" >
-<link href="css/font-awesome.min.css" rel="stylesheet"  type="text/css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김수지 | 포트폴리오</title>
 
-<script src="js/jquery-1.12.4.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/common.js"></script>
-<script src="js/main.js"></script>
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="css/fullpage.min.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/fullpage.js"></script>
+<script>
+$(document).ready(function() {
+	var menu = $('.slide');
+	console.log(menu);
+	
+	menu.mouseenter(function(){
+		$(this).find('.cover').stop().fadeIn();
+		$(this).find('.pf_text').stop().animate({top:'38%'},300);
+	});
+	
+	menu.mouseleave(function(){
+		$(this).find('.cover').stop().fadeOut(800);
+		$(this).find('.pf_text').stop().animate({top:'-150'},300);
+	});
+	
+	
+	// modal창 띄우기
+	$('.openbtn1').click(function(){
+		$('.pop1').fadeIn();
+		
+		// $('body').addClass('fixed');
+        $('body').on('scroll touchmove mousewheel', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        });
+	});
+	
+	$('.closebtn').click(function(){
+		$('.pop1').fadeOut();
+		
+		// $('body').removeClass('fixed');
+        $('body').off('scroll touchmove mousewheel');
+	    });
+	
+	$('.openbtn2').click(function(){
+		$('.pop2').fadeIn();
+		
+		// $('body').addClass('fixed');
+        $('body').on('scroll touchmove mousewheel', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        });
+	});
+	
+	$('.closebtn').click(function(){
+		$('.pop2').fadeOut();
+		
+		// $('body').removeClass('fixed');
+        $('body').off('scroll touchmove mousewheel');
+	    });
+		
+	$('.openbtn3').click(function(){
+		$('.pop3').fadeIn();
+		
+		// $('body').addClass('fixed');
+        $('body').on('scroll touchmove mousewheel', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        });
+	});
+	
+	$('.closebtn').click(function(){
+		$('.pop3').fadeOut();
+		
+		// $('body').removeClass('fixed');
+        $('body').off('scroll touchmove mousewheel');
+	    });
+		
+});
+
+// hamburger 버튼
+$(function() {
+            $('.hamburger-button').on('click', function(event) {
+                event.preventDefault();
+
+                $(this).toggleClass('active');
+                $('.overlay').toggleClass('visible');
+            });
+        });
+</script>
 </head>
+
 
 <body>
 
-<div class="main_page"> <!-- main-page start -->
-
- <header class="header"> <!-- header start -->
- 
-  <h1 class="logo">
-   <a href="index.html"><img src="img/logo.png" alt="프로스펙스"></a>
-  </h1>
-  
-  <div class="gnb_wrap"> <!-- gnb_wrap start -->
-  
-   <div class="gnb"> <!-- gnb start -->
-   
-    <ul class="main_menu"> <!-- main_menu start -->
-    
-     <li>
-      <a href="index-sub2-1.html">
-       PRO-SPECS
-      </a>
-      <span class="line"></span> <!-- 주메뉴 하단부분의 선 -->
-      <ul class="sub sub1">
-       <li><a href="index-sub2-1.html">About PRO-SPECS</a></li>
-       <li><a href="index-sub2-2.html">CI</a></li>
-       <li><a href="index-sub2-3.html">매장찾기</a></li>
-      </ul>
-     </li>
-     
-     <li>
-      <a href="index-sub3-1.html">
-       MEN
-      </a>
-      <span class="line"></span> <!-- 주메뉴 하단부분의 선 -->
-      <ul class="sub sub2">
-       <li><a href="index-sub3-1.html">신발</a></li>
-       <li><a href="index-sub3-2.html">의류</a></li>
-       <li><a href="index-sub3-3.html">용품</a></li>
-      </ul>
-     </li>
-     
-     <li>
-      <a href="index-sub4-1.html">
-       WOMEN
-      </a>
-      <span class="line"></span> <!-- 주메뉴 하단부분의 선 -->
-      <ul class="sub sub3">
-       <li><a href="index-sub4-1.html">신발</a></li>
-       <li><a href="index-sub4-2.html">의류</a></li>
-       <li><a href="index-sub3-3.html">용품</a></li>
-      </ul>
-     </li>
-     
-     <li>
-      <a href="index-sub5.html">
-       KIDS
-      </a>
-      <span class="line"></span> <!-- 주메뉴 하단부분의 선 -->
-      <ul class="sub sub4">
-       <li><a href="index-sub5.html">신발</a></li>
-       <li><a href="#" onclick="alert('해당 상품은 준비 중입니다.')">의류</a></li>
-       <li><a href="index-sub3-3.html"">용품</a></li>
-      </ul>
-     </li>
-     
-     <li>
-      <a href="index-sub6-1.html">
-       COMMUNITY
-      </a>
-      <span class="line"></span> <!-- 주메뉴 하단부분의 선 -->
-      <ul class="sub sub5">
-       <li><a href="index-sub6-1.html">REVIEW</a></li>
-       <li><a href="index-sub6-2.html">NEWS</a></li>
-       <li><a href="index-sub6-3.html">EVENT</a></li>
-      </ul>
-     </li>
-     
-    </ul> <!-- main_menu end -->
-   
-   </div> <!-- gnb end -->
-   
-   <div class="util"> <!-- util start -->
-   
-    <ul class="util_menu"> <!-- util_menu start -->     
-     <li><a href="login.html">로그인</a></li>
-     <li><a href="join.html">회원가입</a></li>
-     <li><a href="index-sub1-1.html">고객센터</a></li>      
-    </ul> <!-- util_menu end -->
-    
-   </div> <!-- util end -->
-     
-  </div> <!-- gnb_wrap end -->
-  
-  <div class="search_wrap"> <!-- search_wrap start -->
-   <div class="search"> <!-- search start -->
-   
-    <form action="search.php" method="post">
-     <fieldset>
-      <legend class="blind">제품검색</legend>
-      <input id="target" type="text" placeholder="">
-      <button type="submit">
-       <img src="img/search.png" alt="">
-      </button>
-     </fieldset>
-    </form>
-    
-   </div> <!-- search end -->
-  </div> <!-- search_wrap end -->
- 
-  <div class="nav_m">
-    <a href="index.html">
-     <img src="img/logo_l.png" alt="프로스펙스">
-    </a> 
-    <a href="#" class="btn">
-     <img src="img/nav_btn.png" alt="모바일버튼">
-    </a>      
-   </div>
-   
- </header> <!-- header end -->
- 
- <!-- mobile header start -->
-  <div class="nav_m_header">
-   <div class="m1">
-    <img src="img/logo.png" alt="프로스펙스">
-    <a href="#" class="close-btn">
-     <img src="img/close_btn.png" alt="닫기버튼">
+    <!-- hamburger menu start -->
+    <a href="#" class="hamburger-button">
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
     </a>
-   </div>
-   <div class="m2">
-    <div class="m2_search">
-     <form action="search.php" method="post">
-      <fieldset>
-       <legend class="blind">제품검색</legend>
-       <input id="target" type="text" placeholder="">
-       <button type="submit">
-        <img src="img/search.png" alt="">
-       </button>
-      </fieldset>
-     </form>
-    </div> 
-   </div>
-   <div class="m3">  
-    <ul>
-     <li><a href="login.html">로그인</a></li>
-     <li><a href="login.html">회원가입</a></li>
-     <li><a href="index-sub1-1.html">고객센터</a></li>
-    </ul>
-   </div>
-   <div class="m4">  
-     <li><a href="index-sub2-1.html">PRO-SPECS</a></li>
-     <li><a href="index-sub3-1.html">MEN</a></li>
-     <li><a href="index-sub4-1.html">WOMEN</a></li>
-     <li><a href="index-sub5.html">KIDS</a></li>
-     <li><a href="index-sub6-1.html">COMMUNITY</a></li>
-   </div>   
-  </div>
-  <!-- mobile header end -->
- 
- <main class="main"> <!-- main start -->
-  <div class="main_visual"> <!-- main_visual start -->
-   <div class="swiper-container"> <!-- swiper-container start -->
-    <div class="swiper-wrapper"> <!-- swiper-wrapper start -->
-     <div class="swiper-slide visual banner1"> <!-- swiper-slide visual banner1 start -->
-     </div> <!-- swiper-slide visual banner1 end -->
-     
-     <div class="swiper-slide visual banner2"> <!-- swiper-slide visual banner2 start -->
-     </div> <!-- swiper-slide visual banner2 end -->
-     
-     <div class="swiper-slide visual banner3"> <!-- swiper-slide visual banner3 start -->
-     </div> <!-- swiper-slide visual banner3 end -->
-    </div> <!-- swiper-wrapper end -->
+    <div class="overlay">
+     <nav class="menu">
+      <ul>
+       <li data-menuanchor="0st">
+        <a href="#0st">HOME</a>
+       </li>
+       <li data-menuanchor="1st">
+        <a href="#1st">ABOUT ME</a>
+       </li>
+       <li data-menuanchor="2st">
+        <a href="#2st">SKILLS</a>
+       </li>
+       <li data-menuanchor="3st">
+        <a href="#3st">PROJECT</a>
+       </li>
+      </ul>
+     </nav>
+    </div>
+    <!-- hamburger menu end  -->
     
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <button type="button" class="main_btn_play"></button>
-    <button type="button" class="main_btn_pause"></button>
-   </div> <!-- swiper-container end -->
-  </div> <!-- main_visual end -->
-  
-  
-  <div class="section1"> <!-- section1 start -->
-   <div class="container"> <!-- container start -->
-    <h2>BEST PRODUCT</h2>
-    <div class="swiper-container product_best"> <!-- swiper-container product start -->
-     <div class="swiper-wrapper"> <!-- swiper-wrapper start -->
-      <div class="swiper-slide box"> <!-- swiper-slide box start -->
-       <a href="index-sub3-3.html">
-       <img src="img/best01.png" alt="best01">
-       <h3>슈퍼코닉 아동가방</h3>
-       <h4>103,200</h4>
-       </a>
-      </div> <!-- swiper-slide box end -->
-      
-      <div class="swiper-slide box"> <!-- swiper-slide box start -->
-       <a href="index-sub3-2.html">
-       <img src="img/best02.png" alt="best02">
-       <h3>오리지널 베이직 폴리 스트라이프(남여공용)</h3>
-       <h4>61,000</h4>
-       </a>
-      </div> <!-- swiper-slide box end -->
-      
-      <div class="swiper-slide box"> <!-- swiper-slide box start -->
-       <a href="index-sub3-1.html">
-       <img src="img/best03.png" alt="best03">
-       <h3>오리지널 스택스 화이트캣</h3>
-       <h4>69,000</h4>
-       </a>
-      </div> <!-- swiper-slide box end -->
-      
-      <div class="swiper-slide box"> <!-- swiper-slide box start -->
-       <a href="index-sub3-1.html">
-       <img src="img/best04.png"alt="best04">
-       <h3>테크워 하이</h3>
-       <h4>111,200</h4>
-       </a>
-      </div> <!-- swiper-slide box end -->
-      
-      <div class="swiper-slide box"> <!-- swiper-slide box start -->
-       <a href="index-sub3-2.html">
-       <img src="img/best05.png" alt="best05">
-       <h3>오리지널 덴스 맨투맨(남여공용)</h3>
-       <h4>79,000</h4>
-       </a>
-      </div> <!-- swiper-slide box end -->
-      
-      <div class="swiper-slide box"> <!-- swiper-slide box start -->
-       <a href="index-sub3-1.html">
-       <img src="img/best06.png" alt="best06">
-       <h3>오리지널 스택스 102</h3>
-       <h4>39,000</h4>
-       </a>
-      </div> <!-- swiper-slide box end -->
-      
-     </div> <!-- swiper-wrapper end -->
-     
-     <div class="swiper-button-prev"></div>
-     <div class="swiper-button-next"></div>
-     
-    </div> <!-- swiper-container product end -->
-   </div> <!-- container end -->
-  </div> <!-- section1 end -->
-  
-  <div class="section2"> <!-- section2 start -->
-   <h2 class="blind">PRO-SPECS 서비스</h2>
-   <ul>
-    <li>
-     <a href="index-sub6-1.html">
-      <h3>REVIEW</h3>
-      <div class="review section2_bg"></div>
-     </a>
-    </li>
-    <li>
-     <a href="index-sub6-2.html">
-      <h3>NEWS</h3>
-      <div class="sale section2_bg"></div>
-     </a>
-    </li>
-    <li>
-     <a href="index-sub6-3.html">
-      <h3>EVENT</h3>
-      <div class="event section2_bg"></div>
-     </a>
-    </li>
-   </ul>
-  </div> <!-- section2 end -->
-  
-  <div class="section3"> <!-- section3 start -->
-   <h2 class="blind">MAIN VIDEO</h2>
-   <a href="#" class="btnPlay">
-    <h3>PRO-SPECS</h3>
-    <h4>VIDEO</h4>
-    <h5><img src="img/btn_play.png" alt=""></h5>
-   </a> 
-  </div> <!-- section3 end -->
-  
-  <div class="popup"> <!--popup start-->
-   <div class="popup_inner">
-    <div class="modal">
-       <iframe width="850" height="478" src="" frameborder="0" allowfullscreen>
-       </iframe>
-       <a href="#" class="btnClose">영상닫기</a>
+    <!-- navTop -->
+    <nav id="navTop">
+        <div id="navTop_box">
+            <div id="logo">
+                <a href="index.html"><img src="img/logo.jpg" alt=""></a>
+            </div>
+            <ul id="topMenu">
+                <li data-menuanchor="0st"><a href="#0st">HOME</a></li>
+                <li data-menuanchor="1st"><a href="#1st">ABOUT ME</a></li>
+                <li data-menuanchor="2st"><a href="#2st">SKILLS</a></li>
+                <li data-menuanchor="3st"><a href="#3st">PROJECT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="full-page">
+        <div class="section s0">
+            <div class="section_home">
+                <img src="img/scroll.png" alt="" class="scroll_img">   
+            </div>
+        </div> <!--section s0-->
+        
+        <div class="section s1">
+            <div class="section_content section_content1">
+                <div class="pr_container">
+                 <div class="left_box">
+                  <div class="pr_profile">
+                     <h2>WHO AM I?<br>
+                         배우는 것을 즐기는<br>
+                         김수지 입니다</h2>
+                     
+                  </div>
+                 </div> <!-- left_box -->
+                 
+                 <div class="right_box">
+                  <div class="pr_strengths">
+                    <ul>
+                          <li>
+                              <p>디지털 웹디자인, 웹퍼블리셔 구직자 양성과정 수료</p>
+                              <p>웹디자인&amp;웹퍼블리셔 세계를 처음 만나, 배움의 과정 끝에 양성과정을 수료했습니다</p>
+                          </li>
+                          <li>
+                              <p>배움을 즐기다</p>
+                              <p>새로운 것도 다시 배우는 것도 두려워하지 않고 즐기며 배웁니다</p>
+                          </li>
+                          <li>
+                              <p>차근차근  계획부터</p>
+                              <p>어떤 일을 하든 차근차근 계획부터 수립하고 실행에 옮깁니다</p>
+                          </li>
+                          <li>
+                              <p>실패는 성공의 어머니!</p>
+                              <p>무언가 저를 막는다면, 잠시 쉬었다가 다시 나아갑니다</p>
+                          </li>       
+                    </ul>
+                  </div>
+                 </div> <!-- right_box -->
+                 
+                 <div class="ct_box">
+                  <div class="ct_inbox">
+                   <div class="ct_title"><h3>CONTACT</h3></div>
+                   <div class="ct_txt">
+                    <ul>
+                     <li><img src="img/phone.png" alt=""></li>
+                     <li><a href='tel:010-2707-7302'>010-2707-7302</a></li>
+                    </ul>
+                    <ul>
+                     <li><img src="img/email.png" alt=""></li>
+                     <li><a href="mailto:sujikim0501@naver.com" target="_blank">sujikim0501@naver.com</a></li>
+                    </ul>
+                    <ul>
+                     <li><img src="img/kakao.png" alt=""></li>
+                     <li><a href="https://open.kakao.com/o/sGbhVTQd" target="_blank">ID:Gkop2011</a></li>
+                    </ul>
+                   </div>
+                  </div>
+                 </div> <!-- ct_box -->   
+                </div> <!--pr_container-->
+            </div> <!--section_box section_box_content-->
+        </div> <!--section s1-->
+        
+        <div class="section s2">
+            <div class="section_content section_content2">
+                <h2>SKILL</h2>
+                <div class="skill_wrapper">
+                    <div class="skill_item">
+                        <h3 class="sk_title">HTML5 / CSS3</h3>
+                        <div class="sk_txt_box">
+                            <ul class="sk_txt sk_txt_html">
+                                <li>HTML/CSS를 활용하여 웹사이트를 구현할 수 있습니다</li>
+                                <li>시멘틱 태크 및 논리적인 순서를 통한 마크업으로 코딩이 가능합니다</li>
+                                <li>웹표준과 접근성을 준수하여 코딩이 가능합니다</li>
+                                <li>CSS를 통해 다양한 화면 구현 가능하며 미디어쿼리로 반응형 웹사이트를 구현할 수 있습니다</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skill_item">
+                        <h3 class="sk_title">JavaScript / jQuery</h3>
+                        <div class="sk_txt_box">
+                            <ul class="sk_txt sk_txt_java">
+                                <li>제어문, 함수, 객체, 이벤트 등을 이해하고 활용할 수 있습니다</li>
+                                <li>동적인 웹페이지를 구현할 수 있습니다 (슬라이드, 메뉴, 스크롤 등)</li>
+                                <li>제이쿼리 플러그인 (swiper, fullpage, aos, slick 등)을 적용할 수 있습니다</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="skill_item">
+                        <h3 class="sk_title">Besides</h3>
+                        <div class="sk_txt_box">
+                            <ul class="sk_txt sk_txt_besides">
+                                <li>Photoshop과 Illustrator를 활용해 사진 보정 및 로고, 배너, 아이콘 등을 제작하여 웹페이지의 디자인적 요소를 높일 수 있습니다</li>
+                                <li>Word, Powerpoint, Excel, Outlook, 한글과 같은 업무와 생활 전반에 활용할 수 있는 생산성 클라우드를 다룰 수 있습니다 </l                               
+                            ></ul>
+                        </div>
+                    </div>
+                    <div class="skill_item">
+                        <h3 class="sk_title">Communication</h3>
+                        <div class="sk_txt_box">
+                            <ul class="sk_txt sk_txt_communication">
+                                <li>HTML/CSS/JavaScript에 대한 기본적인 이해를 바탕으로 개발자와 원활한 소통이 가능합니다</li>
+                                <li>HTML/CSS/JavaScript에 대한 이해를 바탕으로 구현 가능한 디자인을 제작, 개발의 효율을 높이는데 기여할 수 있습니다</li>
+                                <li>고객의 니즈를 파악하여 웹사이트를 구현할 수 있습니다</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--section_box section_box_content-->
+        </div> <!--section s2-->
+        
+        <div class="section s3">
+            <div class="section_content section_content3">
+             <div class="slide slide_1">
+               <h2>PROJECT 1</h2>
+               <div class="pf_container">
+                <div class="pf_img_1"><img src="img/project1_1.png" alt=""></div>
+                <div class="pf_img_2"><img src="img/project1_2.png" alt=""></div>
+                <div class="pf_img_3"><img src="img/project1_3.png" alt=""></div>
+                <div class="cover"></div>
+                <div class="pf_text">
+                 <h3>프로스펙스</h3>
+                 <p>스포츠용품 브랜드 사이트 리뉴얼</p>
+                 <div class="site">
+                  <button class="openbtn1">작업 기획서</button>
+                  <a href="https://star00168.github.io/prospecs/" class="link" target="_blank">사이트 보기</a>
+                 </div> <!-- site -->
+                </div> <!-- pf_text  -->
+               </div> <!-- pf_container -->      
+             </div> <!-- slide_1 -->
+             
+             <div class="slide slide_2">
+               <h2>PROJECT 2</h2>
+               <div class="pf_container">
+                <div class="pf_img_1"><img src="img/project2_1.png" alt=""></div>
+                <div class="pf_img_2"><img src="img/project2_2.png" alt=""></div>
+                <div class="pf_img_3"><img src="img/project2_3.png" alt=""></div>
+                <div class="cover"></div>
+                <div class="pf_text">
+                 <h3>내셔널지오그래픽</h3>
+                 <p>해외위성방송 사이트 리뉴얼</p>
+                 <div class="site">
+                  <button class="openbtn2">작업 기획서</button>
+                  <a href="https://star00168.github.io/national-geographic/" class="link" target="_blank">사이트 보기</a>
+                 </div> <!-- site -->
+                </div> <!-- pf_text  -->
+               </div> <!-- pf_container -->         
+             </div> <!-- slide_1 -->             
+             
+             <div class="slide slide_3">
+               <h2>PROJECT 3</h2>
+               <div class="pf_container">
+                <div class="pf_img_1"><img src="img/project3_1.png"alt=""></div>
+                <div class="pf_img_2"><img src="img/project3_2.png" alt=""></div>
+                <div class="pf_img_3"><img src="img/project3_3.png" alt=""></div>
+                <div class="cover"></div>
+                <div class="pf_text">
+                 <h3>라 가르송</h3>
+                 <p>온라인 패션 소매업 사이트 리뉴얼</p>
+                 <div class="site">
+                  <button class="openbtn3">작업 기획서</button>
+                  <a href="https://star00168.github.io/la-garconne/" class="link" target="_blank">사이트 보기</a>
+                 </div> <!-- site -->
+                </div> <!-- pf_text  -->
+               </div> <!-- pf_container -->         
+             </div> <!-- slide_1 -->            
+                                                  
+             <div id="footer">
+              <div id="footer_txt">© KimSuji portfolio 2021<br>
+                                   해당 홈페이지는 상업적 용도가 아닌 개인 포트폴리오 목적으로 제작되었습니다.</div>
+             </div> <!-- footer -->
+            
+        </div> <!--section_box section_box_content-->
+    </div> <!--section s3-->
+    
+    
+   <!-- pop1 modal 생성 -->
+   <div class="pop1 modal">
+    <div class="modal_container">
+     <div class="modal_body">
+      <div class="modal_content">
+       <picture>
+        <img class="popup1" src="img/popup.jpg" alt="">
+       </picture>
+      </div>
+      <button class="closebtn">
+       <img src="img/close_btn.png" alt="">
+      </button>
+     </div>
     </div>
    </div>
-  </div> <!--popup end-->
-  
- </main> <!-- main end -->
-  
- <div class="up-btn"> <!-- up-btn start -->
-  <div class="u-btn">
-   <a href="#">
-    <img src="img/up-btn.png" alt="업버튼">
-   </a>
-  </div> 
- </div> <!-- up-btn end -->
- 
- <footer class="footer"> <!-- footer start -->
- 
- <div> 
-  <h1 class="logo">
-   <a href="index.html"><img src="img/logo_f.png" alt="프로스펙스"></a>
-  </h1>
- </div> 
-  
- <div> 
-   <h2 class="blind">회사정보</h2>
-   <ul class="info">
-    <li><a href="#">(주)네트웍스</a></li>
-    <li><a href="#">대표이사:구자용, 문성준</a></li>
-    <li><a href="#">사업장등록번호:622-81-04805</a></li>
-   </ul>
-  </div> 
-  
- <div> 
-  <p class="address">서울특별시 용산구 한강대로 92(한강로2가) LS용산타워</p>
-  <p class="copyright">COPYRIGHT(c) LS NETWORKS CO. ALL RIGHTS RESERVED.</p>
- </div>   
- 
- <div> 
-   <h2 class="blind">소셜미디어</h2>
-   <ul class="sns">
-    <li><a href="https://www.facebook.com/prospecs.korea/?ref=page_internal"><i class="fab fa-facebook"></i></a></li>
-    <li><a href="https://www.instagram.com/prospecsoriginal_official/"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="https://www.youtube.com/channel/UCnBkLBsIWR3w82ujj3dHXag"><i class="fab fa-youtube"></i></a></li>
-   </ul>
- </div>  
-  
- </footer> <!-- footer end -->
- 
-</div> <!-- main_page end -->
+   
+   <!-- pop2 modal 생성 -->
+   <div class="pop2 modal">
+    <div class="modal_container">
+     <div class="modal_body">
+      <div class="modal_content">
+       <picture>
+        <img class="popup2" src="img/popup2.jpg" alt="">
+       </picture>
+      </div>
+      <button class="closebtn">
+       <img src="img/close_btn.png" alt="">
+      </button>
+     </div>
+    </div>
+   </div>
+   
+   <!-- pop3 modal 생성 -->
+   <div class="pop3 modal">
+    <div class="modal_container">
+     <div class="modal_body">
+      <div class="modal_content">
+       <picture>
+        <img class="popup3" src="img/popup3.jpg" alt="">
+       </picture>
+      </div>
+      <button class="closebtn">
+       <img src="img/close_btn.png" alt="">
+      </button>
+     </div>
+    </div>
+   </div>   
 
+<script>
+    new fullpage('#full-page', {
+        licenseKey:'OPEN-SOURCE-GPLV3-LICENSE',
+        anchors:["0st","1st","2st","3st"],
+        menu:"#topMenu",
+        sectionsColor:['#fff', '#ebe7e4', '#fff', '#ebe7e4'],
+        scrollingSpeed: 1000,
+        slidesNavigation: true,	
+		slidesNavPosition: 'bottom',
+        /*onLeave: function(origin, destination, direction) {
+           if(origin.index == 2){
+               $('.skill_item .sk_txt_box .sk_txt').fadeOut();
+           } 
+        },*/
+        onLeave: function(origin, destination, direction) {
+            var leavingSection = this;
+            if(origin.index == 0) {
+                $('.right_box .ct_inbox .ct_txt ul li').delay(600).fadeIn();
+            }
+            if(origin.index == 2) {
+                $('.right_box .ct_inbox .ct_txt ul li').delay(600).fadeIn();
+            }
+            if(origin.index == 1) {
+                $('.right_box .ct_inbox .ct_txt ul li').fadeOut();
+            }
+        }
+        
+    });
+</script>
 </body>
 </html>
